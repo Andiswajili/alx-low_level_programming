@@ -1,1 +1,1 @@
-0x17. C - Doubly linked lists project
+0x17. C - Doubly linked lists project 
