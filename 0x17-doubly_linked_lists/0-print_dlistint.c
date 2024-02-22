@@ -1,30 +1,12 @@
-#include "lists.h"
+#!/usr/bin/python3
+Student = __import__('9-student').Student
 
-/**
- * print_dlistint - prints all the elements of a
- * dlistint_t list
- *
- * @h: head of the list
- * Return: the number of nodes
- */
-size_t print_dlistint(const dlistint_t *h)
-{
-	int count;
+students = [Student("John", "Doe", 23), Student("Bob", "Dylan", 27)]
 
-	count = 0;
-
-	if (h == NULL)
-		return (count);
-
-	while (h->prev != NULL)
-		h = h->prev;
-
-	while (h != NULL)
-	{
-		printf("%d\n", h->n);
-		count++;
-		h = h->next;
-	}
-
-	return (count);
-}
+for student in students:
+    j_student = student.to_json()
+    print(type(j_student))
+    print(j_student['first_name'])
+    print(type(j_student['first_name']))
+    print(j_student['age'])
+    print(type(j_student['age']))
